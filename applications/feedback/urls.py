@@ -1,11 +1,10 @@
 from rest_framework.routers import DefaultRouter
 from django.urls import path, include
 
-from applications.product.views import ProductApiView, CategoryApiView
+from applications.feedback.views import CommentApiView
 
 router = DefaultRouter()
-router.register('category', CategoryApiView)
-router.register('', ProductApiView)
+router.register('comment', CommentApiView)
 
 urlpatterns = [
     path('', include(router.urls))
